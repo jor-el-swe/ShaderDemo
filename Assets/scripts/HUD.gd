@@ -11,4 +11,4 @@ func _on_coin_collected():
 	coins+=1
 	_ready()
 	if coins == NO_COINS_TO_WIN:
-		get_tree().change_scene("res://WinScreen.tscn")
+		get_tree().change_scene("res://Assets/scenes/WinScreen.tscn")

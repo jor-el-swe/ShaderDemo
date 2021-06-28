@@ -5,4 +5,4 @@ func _physics_process(delta):
 		_on_mainMenu_pressed()
 
 func _on_mainMenu_pressed():
-	get_tree().change_scene("res://TitleMenu.tscn")
+	get_tree().change_scene("res://Assets/scenes/TitleMenu.tscn")

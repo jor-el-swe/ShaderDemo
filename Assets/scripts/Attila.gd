@@ -50,7 +50,7 @@ func _physics_process(delta):
 	
 
 func _on_FallZone_body_entered(body):
-	get_tree().change_scene("res://GameOver.tscn")
+	get_tree().change_scene("res://Assets/scenes/GameOver.tscn")
 
 func bounce():
 	velocity.y = -500
