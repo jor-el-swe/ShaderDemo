@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://AttilaAnimations.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Attila.gd" type="Script" id=2]
+[ext_resource path="res://Assets/sounds/jump1.ogg" type="AudioStream" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 26.9655
+height = 12.195
+
+[node name="Attila" type="KinematicBody2D"]
+collision_mask = 16
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.127319, 14.9961 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="soundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -7.576
+pitch_scale = 1.08
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
