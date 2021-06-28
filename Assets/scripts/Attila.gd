@@ -71,4 +71,4 @@ func ouch(var xPosition):
 
 func _on_Timer_timeout():
 	set_modulate(Color(1,1,1,1))
-	get_tree().change_scene("res://GameOver.tscn")
+	get_tree().change_scene("res://Assets/scenes/GameOver.tscn")
