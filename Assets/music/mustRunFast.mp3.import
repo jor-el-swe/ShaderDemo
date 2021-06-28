@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mustRunFast.mp3-24c0c1e79533f0268eada529baf5b1e4.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/mustRunFast.mp3"
+dest_files=[ "res://.import/mustRunFast.mp3-24c0c1e79533f0268eada529baf5b1e4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

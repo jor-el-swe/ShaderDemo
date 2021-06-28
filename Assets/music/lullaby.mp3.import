@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lullaby.mp3-41b9f66c32c1d659452c059550cec323.mp3str"
+
+[deps]
+
+source_file="res://Assets/music/lullaby.mp3"
+dest_files=[ "res://.import/lullaby.mp3-41b9f66c32c1d659452c059550cec323.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
