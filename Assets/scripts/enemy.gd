@@ -20,7 +20,7 @@ func _ready():
 
 func _physics_process(delta):
 
-	if is_on_wall() or not$floorChecker.is_colliding() and detectsCliffs and is_on_floor():
+	if is_on_wall() or is_on_ceiling() or not$floorChecker.is_colliding() and detectsCliffs and is_on_floor():
 		direction *=-1
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h 
 		$floorChecker.position.x = $CollisionShape2D.shape.get_extents().x * direction
@@ -44,6 +44,7 @@ func _on_sidesChecker_body_entered(body):
 		print("hit player side")
 		disableCollisions()
 		body.ouch(position.x)
+
 
 func _on_bottomChecker_body_entered(body):
 	if body.name == "Attila":
