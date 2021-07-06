@@ -30,7 +30,9 @@ func _physics_process(delta):
 		$Sprite.play("air")
 	
 
-	if Input.is_action_just_pressed("jump") or Input.is_action_pressed("jump") and is_on_floor():
+
+	#if Input.is_action_just_pressed("jump") or Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and is_on_floor():	
 		$soundJump.play()
 		velocity.y = JUMP_SPEED
 		
