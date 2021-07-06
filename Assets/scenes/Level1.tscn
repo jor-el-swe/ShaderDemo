@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/music/timeToRelax.mp3" type="AudioStream" id=11]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
 
 [node name="Level1" type="Node2D"]
@@ -64,7 +64,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallZone"]
 position = Vector2( 2193.52, 0 )
-shape = SubResource( 13 )
+shape = SubResource( 1 )
 
 [node name="enemies" type="Node2D" parent="."]
 

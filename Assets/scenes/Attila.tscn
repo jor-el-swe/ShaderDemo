@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.9655
-height = 12.195
+height = 37.4145
 
 [node name="Attila" type="KinematicBody2D"]
 collision_mask = 16
@@ -14,11 +14,12 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
-animation = "idle"
+animation = "walk"
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.127319, 14.9961 )
+position = Vector2( 1.46518, 19.4556 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
