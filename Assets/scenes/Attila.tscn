@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://AttilaAnimations.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/scripts/Attila.gd" type="Script" id=2]
 [ext_resource path="res://Assets/sounds/jump1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/scenes/autoplay.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.9655
@@ -15,7 +16,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "walk"
-frame = 5
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -29,5 +30,8 @@ one_shot = true
 stream = ExtResource( 3 )
 volume_db = -7.576
 pitch_scale = 1.08
+
+[node name="autoplay" type="Node2D" parent="."]
+script = ExtResource( 4 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
