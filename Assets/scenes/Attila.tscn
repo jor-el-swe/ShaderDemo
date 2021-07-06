@@ -34,4 +34,9 @@ pitch_scale = 1.08
 [node name="autoplay" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
+[node name="floorChecker" type="RayCast2D" parent="autoplay"]
+enabled = true
+cast_to = Vector2( 50, 70 )
+collision_mask = 2
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
