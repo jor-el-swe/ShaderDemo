@@ -103,6 +103,13 @@ stream = ExtResource( 11 )
 volume_db = -9.642
 autoplay = true
 
+[node name="tilesInAir" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+collision_layer = 66
+format = 1
+tile_data = PoolIntArray( 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0 )
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
