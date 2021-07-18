@@ -8,6 +8,8 @@ const JUMP_SPEED = -700
 const GRAVITY = 30
 const REDUCED_GRAVITY = -10
 
+var isJumping = false
+
 func _physics_process(delta):
 
 	
@@ -30,9 +32,11 @@ func _physics_process(delta):
 		$Sprite.play("air")
 	
 
+	if !Input.is_action_pressed("jump") and is_on_floor():
+		isJumping = false
 
-	#if Input.is_action_just_pressed("jump") or Input.is_action_pressed("jump") and is_on_floor():
-	if Input.is_action_pressed("jump") and is_on_floor():	
+	if Input.is_action_pressed("jump") and is_on_floor() and !isJumping:	
+		isJumping = true
 		$soundJump.play()
 		velocity.y = JUMP_SPEED
 		
