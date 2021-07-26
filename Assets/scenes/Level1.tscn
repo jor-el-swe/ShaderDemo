@@ -124,15 +124,15 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 position = Vector2( 1929.98, 520.545 )
 
 [node name="FireShader" parent="." instance=ExtResource( 6 )]
-position = Vector2( 283.116, 400.151 )
+position = Vector2( 479.114, 400 )
 scale = Vector2( 0.1, 0.3 )
 
 [node name="FireShader2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 599.424, 399.195 )
+position = Vector2( 599.424, 400 )
 scale = Vector2( 0.1, 0.3 )
 
 [node name="FireShader3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 822.975, 399.64 )
+position = Vector2( 822.975, 400 )
 scale = Vector2( 0.1, 0.3 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
