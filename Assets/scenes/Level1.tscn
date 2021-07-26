@@ -125,6 +125,7 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 
 [node name="Goal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6713.98, 48.545 )
+path = "res://Assets/scenes/Level2.tscn"
 
 [node name="FireShader" parent="." instance=ExtResource( 6 )]
 position = Vector2( 479.114, 400 )

@@ -14,6 +14,10 @@ config/name="Platformer Tutorial"
 run/main_scene="res://Assets/scenes/TitleMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Assets/scripts/global.gd"
+
 [display]
 
 window/size/resizable=false

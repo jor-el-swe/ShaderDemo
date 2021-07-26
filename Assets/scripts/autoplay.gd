@@ -5,16 +5,17 @@ var isMovingGuy = false
 
 var evRight = InputEventAction.new()
 var evJump = InputEventAction.new()
-var isAutoPlaying = false;
+#var isAutoPlaying = false;
+onready var Global = get_node("/root/Global")
 
 func _ready():
 	evRight.action = "right"
 	evJump.action = "jump"
 	
 func autoplayOnOff():
-	isAutoPlaying = not isAutoPlaying
+	Global.isAutoPlaying = not Global.isAutoPlaying
 	
-	if isAutoPlaying:
+	if Global.isAutoPlaying:
 		print("moves forward")
 		evRight.pressed = true
 		
@@ -29,7 +30,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("autoPlay"):
 		autoplayOnOff()
 	
-	if isAutoPlaying:
+	if Global.isAutoPlaying:
 		#don't jump if we are running on solid ground
 		if $floorChecker.is_colliding() and get_parent().is_on_floor():
 			evJump.pressed = false
