@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/ShadyTiles/laserRedBurst.png" type="Texture" id=1]
 [ext_resource path="res://Assets/scripts/goal.gd" type="Script" id=2]
-[ext_resource path="res://Goal.gd" type="Script" id=3]
+[ext_resource path="res://Assets/scripts/goalPath.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.0277, 24.8275 )
