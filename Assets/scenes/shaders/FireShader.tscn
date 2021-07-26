@@ -75,11 +75,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="FireShader" type="Area2D" parent="."]
 collision_layer = 128
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FireShader"]
 position = Vector2( 511.244, 331.04 )
 shape = SubResource( 7 )
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="FireShader" to="." method="_on_Area2D_body_entered"]
