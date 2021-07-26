@@ -10,5 +10,4 @@ func _ready():
 func _on_Area2D_body_entered(body):
 		if body.name == "Attila":
 			print("burn player")
-			#disableCollisions()
-			#body.ouch(position.x)
+			body.ouch(position.x)

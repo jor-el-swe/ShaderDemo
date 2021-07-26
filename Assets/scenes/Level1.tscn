@@ -124,7 +124,7 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 position = Vector2( 1929.98, 520.545 )
 
 [node name="FireShader" parent="." instance=ExtResource( 6 )]
-position = Vector2( 184.698, 399.358 )
+position = Vector2( 283.116, 400.151 )
 scale = Vector2( 0.1, 0.3 )
 
 [node name="FireShader2" parent="." instance=ExtResource( 6 )]
