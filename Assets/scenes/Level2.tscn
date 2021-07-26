@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/background/set2_background.png" type="Texture" id=4]
+[ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
+[ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/music/ghostsDontScareMe.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4535.81, 176.353 )
+
+[node name="Level1" type="Node2D"]
+position = Vector2( 3.36353, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="blueSky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 960 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/blueSky"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="farBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, -1200 )
+motion_scale = Vector2( 0.2, 0.2 )
+motion_mirroring = Vector2( 2560, 1920 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/farBlocks"]
+modulate = Color( 0.462745, 0.109804, 0.486275, 0.352941 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="middleBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, -500 )
+motion_scale = Vector2( 0.4, 0.4 )
+motion_mirroring = Vector2( 1600, 1200 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/middleBlocks"]
+modulate = Color( 0, 0.294118, 0.4, 0.403922 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="nearbyBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.7 )
+motion_mirroring = Vector2( 1120, 840 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/nearbyBlocks"]
+modulate = Color( 0.419608, 0.470588, 0.0784314, 0.52549 )
+position = Vector2( 1.12244, 0 )
+scale = Vector2( 1.75, 1.75 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="FallZone" type="Area2D" parent="."]
+position = Vector2( -853.262, 928.772 )
+collision_layer = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FallZone"]
+position = Vector2( 2193.52, 0 )
+shape = SubResource( 1 )
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( -623.88, 71.524 )
+direction = 1
+
+[node name="enemy4" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( -498.063, 71.8275 )
+
+[node name="enemy5" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 239.85, 252.773 )
+detectsCliffs = false
+
+[node name="Attila" parent="." instance=ExtResource( 2 )]
+position = Vector2( -812.223, 292.92 )
+
+[node name="Camera2D" type="Camera2D" parent="Attila"]
+position = Vector2( 2.54881, -89.0872 )
+current = true
+limit_left = -1015
+limit_top = -1000
+limit_right = 7000
+limit_bottom = 630
+limit_smoothed = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+drag_margin_left = 0.3
+drag_margin_top = 0.31
+drag_margin_right = 0.3
+drag_margin_bottom = 0.11
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="musicLevel1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -9.642
+autoplay = true
+
+[node name="tilesInAir2" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+collision_layer = 66
+format = 1
+tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
+
+[node name="tileOnGround" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 2, 0, 131107, 0, 0, 131108, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 131120, 0, 0, 131121, 0, 0, 131122, 0, 0, 131123, 0, 0, 131124, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 131128, 0, 0, 131129, 0, 0, 131130, 0, 0, 131131, 0, 0, 131132, 0, 0, 131133, 0, 0, 131134, 0, 0, 131135, 0, 0, 131136, 0, 0, 131137, 0, 0, 131138, 0, 0, 131139, 0, 0, 131140, 0, 0, 131141, 0, 0, 131142, 0, 0, 131143, 0, 0, 131144, 0, 0, 131145, 0, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131155, 0, 0, 131156, 0, 0, 131157, 0, 0, 131158, 0, 0, 131159, 0, 0, 131160, 0, 0, 131161, 0, 0, 131162, 0, 0, 131163, 0, 0, 131164, 0, 0, 131165, 0, 0, 131166, 0, 0, 131167, 0, 0, 131168, 0, 0, 458738, 0, 0, 524274, 0, 0, 589810, 0, 0, 589811, 0, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0 )
+
+[node name="Goal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6713.98, 48.545 )
+
+[node name="Goal2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1129.01, 465.015 )
+path = "res://Assets/scenes/GameOver.tscn"
+
+[node name="FireShader" parent="." instance=ExtResource( 6 )]
+position = Vector2( 479.114, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 599.424, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 822.975, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2611.66, 52.9415 )
+scale = Vector2( 0.1, 0.3 )
+
+[connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
