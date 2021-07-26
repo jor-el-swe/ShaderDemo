@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Goal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/background/set2_background.png" type="Texture" id=4]
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
+[ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/music/timeToRelax.mp3" type="AudioStream" id=11]
 
@@ -52,6 +53,7 @@ motion_mirroring = Vector2( 1120, 840 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/nearbyBlocks"]
 modulate = Color( 0.419608, 0.470588, 0.0784314, 0.52549 )
+position = Vector2( 1.12244, 0 )
 scale = Vector2( 1.75, 1.75 )
 texture = ExtResource( 5 )
 centered = false
@@ -120,5 +122,17 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 
 [node name="Goal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1929.98, 520.545 )
+
+[node name="FireShader" parent="." instance=ExtResource( 6 )]
+position = Vector2( 184.698, 399.358 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 599.424, 399.195 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 822.975, 399.64 )
+scale = Vector2( 0.1, 0.3 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
