@@ -44,7 +44,7 @@ void fragment()
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/scanline_count = 50.0
+shader_param/scanline_count = 137.8
 
 [node name="VHSVision" type="Node2D"]
 
