@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "//---CRT Shader---
+shader_type canvas_item;
+
+//uniform float scanline_count : hint_range(0, 1800) = 50.0;
+
+const vec3 colorA = vec3(0.149,0.141,0.912);
+const vec3 colorB = vec3(1.000,0.833,0.224);
+
+
+vec4 sinColors(float iTime) {
+                vec3 color = vec3(0.0f,0.0f,0.0f);
+
+                //float pct = abs(sin(TIME));
+
+				float pct = abs(sin(iTime));
+
+                // Mix uses pct (a value from 0-1) to
+                // mix the two colors
+                color = mix(colorA, colorB, pct);
+
+                return vec4(color,1.0);
+            }
+
+
+void fragment()
+{	
+	float PI = 3.14159;
+	
+	//You can modify the *3.0, *-3.0 for a bigger or smaller 
+	float r = 1.0;
+	float g = 1.0;
+	float b = 0.0;
+	
+	vec4 col = vec4(UV.y,UV.x,0,1.0);
+
+	
+	
+	COLOR = sinColors(TIME);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="RotatingFans" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_right = 1280.0
+margin_bottom = 960.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
