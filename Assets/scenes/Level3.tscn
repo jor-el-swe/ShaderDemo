@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -8,7 +8,9 @@
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/music/finallySucceeding.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/scenes/procedural/procedural1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/scenes/procedural/procedural2.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
@@ -147,28 +149,37 @@ scale = Vector2( 0.1, 0.3 )
 position = Vector2( 2611.66, 52.9415 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="RotatingFans" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3000, -230 )
+[node name="RotatingFans7" type="Node" parent="."]
+
+[node name="RotatingFans" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4000, -230 )
+[node name="RotatingFans2" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 4003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5000, -230 )
+[node name="RotatingFans3" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 5003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3500, -230 )
+[node name="RotatingFans4" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4500, -230 )
+[node name="RotatingFans5" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5500, -230 )
+[node name="RotatingFans6" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+
+[node name="procedural1" parent="." instance=ExtResource( 9 )]
+position = Vector2( -192.333, 169.706 )
+
+[node name="procedural2" parent="." instance=ExtResource( 11 )]
+position = Vector2( -450.255, 299.813 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
