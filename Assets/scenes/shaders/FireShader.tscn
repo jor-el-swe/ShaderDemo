@@ -40,26 +40,26 @@ void fragment()
 	COLOR = color;
 }"
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=2]
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
 
-[sub_resource type="OpenSimplexNoise" id=5]
+[sub_resource type="OpenSimplexNoise" id=4]
 
-[sub_resource type="NoiseTexture" id=6]
+[sub_resource type="NoiseTexture" id=5]
 width = 1344
 height = 868
-noise = SubResource( 5 )
+noise = SubResource( 4 )
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=6]
 shader = SubResource( 1 )
 shader_param/brighter_color = Color( 0, 0.392157, 1, 1 )
 shader_param/middle_color = Color( 0.545098, 0, 1, 1 )
 shader_param/darker_color = Color( 0.180392, 0.0509804, 0.639216, 1 )
 shader_param/spread = 0.5
-shader_param/noise_tex = SubResource( 6 )
-shader_param/gradient_tex = SubResource( 4 )
+shader_param/noise_tex = SubResource( 5 )
+shader_param/gradient_tex = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 336.305, 202.555 )
@@ -68,7 +68,7 @@ extents = Vector2( 336.305, 202.555 )
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 2 )
+material = SubResource( 6 )
 margin_right = 1028.0
 margin_bottom = 596.0
 __meta__ = {

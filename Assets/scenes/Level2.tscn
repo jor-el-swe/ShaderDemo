@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/music/ghostsDontScareMe.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Assets/scenes/shaders/VHSVision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -26,6 +27,7 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="farBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 0, -1200 )
 motion_scale = Vector2( 0.2, 0.2 )
 motion_mirroring = Vector2( 2560, 1920 )
@@ -37,6 +39,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="middleBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 0, -500 )
 motion_scale = Vector2( 0.4, 0.4 )
 motion_mirroring = Vector2( 1600, 1200 )
@@ -48,6 +51,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="nearbyBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.7, 0.7 )
 motion_mirroring = Vector2( 1120, 840 )
 
@@ -106,7 +110,6 @@ editor_draw_drag_margin = true
 [node name="musicLevel1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -9.642
-autoplay = true
 
 [node name="tilesInAir2" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -141,5 +144,14 @@ scale = Vector2( 0.1, 0.3 )
 [node name="FireShader4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2611.66, 52.9415 )
 scale = Vector2( 0.1, 0.3 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2( 0, 1 )
+motion_offset = Vector2( -600, -100 )
+motion_mirroring = Vector2( 1285, 960 )
+
+[node name="VHSVision" parent="ParallaxBackground2/ParallaxLayer" instance=ExtResource( 8 )]
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
