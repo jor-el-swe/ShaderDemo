@@ -76,8 +76,12 @@ shape = SubResource( 1 )
 position = Vector2( -623.88, 71.524 )
 direction = 1
 
-[node name="enemy4" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( -498.063, 71.8275 )
+[node name="enemy2" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 2532.48, 251.118 )
+direction = 1
+
+[node name="enemy3" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 2654.71, 251.118 )
 
 [node name="enemy5" parent="enemies" instance=ExtResource( 10 )]
 position = Vector2( 239.85, 252.773 )
@@ -114,7 +118,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
 collision_layer = 66
 format = 1
-tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
+tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
 
 [node name="tileOnGround" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

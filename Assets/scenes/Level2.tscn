@@ -88,6 +88,18 @@ position = Vector2( -498.063, 71.8275 )
 position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
 
+[node name="enemy6" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 3303.74, -249.852 )
+
+[node name="enemy7" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 4376.07, -267.374 )
+
+[node name="enemy8" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 5276.99, -252.137 )
+
+[node name="enemy9" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( -498.063, 71.8275 )
+
 [node name="Attila" parent="." instance=ExtResource( 2 )]
 position = Vector2( -812.223, 292.92 )
 
@@ -119,7 +131,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
 collision_layer = 66
 format = 1
-tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
+tile_data = PoolIntArray( -196562, 0, 0, -196561, 0, 0, -196560, 0, 0, -196547, 0, 0, -196546, 0, 0, -196533, 0, 0, -196532, 0, 0, -196531, 0, 0, 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
 
 [node name="tileOnGround" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
