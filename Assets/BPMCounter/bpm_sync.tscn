@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/music/finallySucceeding.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Assets/music/finallySucceeding.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/BPMCounter/Label.gd" type="Script" id=2]
 [ext_resource path="res://Assets/BPMCounter/lcd.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/BPMCounter/bpm_sync.gd" type="Script" id=7]
