@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/scenes/Level4.gd" type="Script" id=8]
 [ext_resource path="res://Assets/BPMCounter/bpm_sync.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 
@@ -15,6 +16,7 @@ extents = Vector2( 4535.81, 176.353 )
 
 [node name="Level1" type="Node2D"]
 position = Vector2( 3.36353, 0 )
+script = ExtResource( 8 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -22,11 +24,13 @@ position = Vector2( 3.36353, 0 )
 motion_mirroring = Vector2( 1280, 960 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/blueSky"]
+visible = false
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 centered = false
 
 [node name="farBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 0, -1200 )
 motion_scale = Vector2( 0.2, 0.2 )
 motion_mirroring = Vector2( 2560, 1920 )
@@ -38,6 +42,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="middleBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 0, -500 )
 motion_scale = Vector2( 0.4, 0.4 )
 motion_mirroring = Vector2( 1600, 1200 )
@@ -49,6 +54,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="nearbyBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.7, 0.7 )
 motion_mirroring = Vector2( 1120, 840 )
 
@@ -174,7 +180,7 @@ scale = Vector2( 0.1, 0.3 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BPMBackground"]
 motion_scale = Vector2( 0, 0 )
-motion_offset = Vector2( 500, -500 )
+motion_offset = Vector2( 500, -520 )
 
 [node name="BPMSync" parent="BPMBackground/ParallaxLayer" instance=ExtResource( 9 )]
 anchor_right = 0.0
