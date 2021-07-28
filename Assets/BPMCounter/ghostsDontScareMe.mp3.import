@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ghostsDontScareMe.mp3-461af3458f4653faff3be3cebfdebdae.mp3str"
+
+[deps]
+
+source_file="res://Assets/BPMCounter/ghostsDontScareMe.mp3"
+dest_files=[ "res://.import/ghostsDontScareMe.mp3-461af3458f4653faff3be3cebfdebdae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

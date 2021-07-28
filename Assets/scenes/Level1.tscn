@@ -88,7 +88,7 @@ position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( -812.223, 292.92 )
+position = Vector2( 2867.78, 20.92 )
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
 position = Vector2( 2.54881, -89.0872 )
