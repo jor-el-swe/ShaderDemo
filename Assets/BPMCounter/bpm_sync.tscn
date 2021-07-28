@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/music/finallySucceeding.mp3" type="AudioStream" id=1]
-[ext_resource path="res://Assets/BPMCounter/play_sound_button.png" type="Texture" id=2]
-[ext_resource path="res://Assets/BPMCounter/play_sound_button_hl.png" type="Texture" id=4]
-[ext_resource path="res://Assets/BPMCounter/play_system_button.png" type="Texture" id=5]
 [ext_resource path="res://Assets/BPMCounter/lcd.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/BPMCounter/bpm_sync.gd" type="Script" id=7]
 
@@ -38,28 +35,3 @@ align = 1
 
 [node name="Player" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -3.772
-
-[node name="PlaySystem" type="TextureButton" parent="."]
-margin_left = 214.737
-margin_top = 187.368
-margin_right = 342.737
-margin_bottom = 315.368
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 5 )
-texture_hover = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PlaySound" type="TextureButton" parent="."]
-margin_left = 622.105
-margin_top = 183.158
-margin_right = 750.105
-margin_bottom = 311.158
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 4 )
-
-[connection signal="pressed" from="PlaySystem" to="." method="_on_PlaySystem_pressed"]
-[connection signal="pressed" from="PlaySound" to="." method="_on_PlaySound_pressed"]

@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/music/finallySucceeding.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/BPMCounter/bpm_sync.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -91,7 +91,7 @@ detectsCliffs = false
 position = Vector2( -812.223, 292.92 )
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
-position = Vector2( 2.54881, -89.0872 )
+position = Vector2( 2.54883, -89.0872 )
 current = true
 limit_left = -1015
 limit_top = -1000
@@ -107,11 +107,6 @@ drag_margin_right = 0.3
 drag_margin_bottom = 0.11
 editor_draw_limits = true
 editor_draw_drag_margin = true
-
-[node name="musicLevel1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-volume_db = -3.297
-autoplay = true
 
 [node name="tilesInAir2" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -131,46 +126,62 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 [node name="Goal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6713.98, 48.545 )
 
-[node name="FireShader" parent="." instance=ExtResource( 6 )]
-position = Vector2( 479.114, 400 )
-scale = Vector2( 0.1, 0.3 )
+[node name="RotatingFans" type="Node" parent="."]
 
-[node name="FireShader2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 599.424, 400 )
-scale = Vector2( 0.1, 0.3 )
-
-[node name="FireShader3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 822.975, 400 )
-scale = Vector2( 0.1, 0.3 )
-
-[node name="FireShader4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2611.66, 52.9415 )
-scale = Vector2( 0.1, 0.3 )
-
-[node name="RotatingFans7" type="Node" parent="."]
-
-[node name="RotatingFans" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans2" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans2" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 4003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans3" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans3" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 5003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans4" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans4" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans5" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans5" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans6" parent="RotatingFans7" instance=ExtResource( 7 )]
+[node name="RotatingFans6" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+
+[node name="Fires" type="Node" parent="."]
+
+[node name="FireShader" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 482.478, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader2" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 602.788, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader3" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 826.339, 400 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="FireShader4" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2615.02, 52.9415 )
+scale = Vector2( 0.1, 0.3 )
+
+[node name="BPMBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BPMBackground"]
+motion_scale = Vector2( 0, 0 )
+motion_offset = Vector2( 500, -500 )
+
+[node name="BPMSync" parent="BPMBackground/ParallaxLayer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1008.64
+margin_top = -196.0
+margin_right = -1008.64
+margin_bottom = -196.0
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
