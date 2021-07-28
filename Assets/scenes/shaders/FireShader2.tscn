@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/scenes/shaders/FireShader.gd" type="Script" id=1]
-[ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial1.material" type="Material" id=2]
+[ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial2.material" type="Material" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 336.305, 202.555 )

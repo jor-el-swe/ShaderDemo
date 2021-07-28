@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Assets/scenes/Level4.gd" type="Script" id=8]
 [ext_resource path="res://Assets/BPMCounter/bpm_sync.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial2.material" type="Material" id=11]
+[ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial1.material" type="Material" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
@@ -161,10 +163,13 @@ scale = Vector2( 0.2, 0.2 )
 [node name="Fires" type="Node" parent="."]
 
 [node name="FireShader" parent="Fires" instance=ExtResource( 6 )]
+material = ExtResource( 12 )
+use_parent_material = true
 position = Vector2( 482.478, 400 )
 scale = Vector2( 0.1, 0.3 )
 
 [node name="FireShader2" parent="Fires" instance=ExtResource( 6 )]
+material = ExtResource( 11 )
 position = Vector2( 602.788, 400 )
 scale = Vector2( 0.1, 0.3 )
 
