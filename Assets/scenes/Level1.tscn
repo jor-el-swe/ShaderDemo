@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.material" type="Material" id=8]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Assets/music/timeToRelax.mp3" type="AudioStream" id=11]
 
@@ -88,7 +89,7 @@ position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2867.78, 20.92 )
+position = Vector2( -796.22, 468.92 )
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
 position = Vector2( 2.54881, -89.0872 )
@@ -155,25 +156,31 @@ scale = Vector2( 0.1, 0.3 )
 [node name="RotatingFans" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [node name="RotatingFans2" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 4003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [node name="RotatingFans3" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 5003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [node name="RotatingFans4" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [node name="RotatingFans5" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [node name="RotatingFans6" parent="Fans" instance=ExtResource( 7 )]
 position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 8 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]

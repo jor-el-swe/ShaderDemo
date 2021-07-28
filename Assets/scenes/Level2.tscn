@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -10,12 +10,16 @@
 [ext_resource path="res://Assets/scenes/shaders/VHSVision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial2.material" type="Material" id=11]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.material" type="Material" id=12]
+[ext_resource path="res://Assets/scenes/Level2.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
 
 [node name="Level1" type="Node2D"]
 position = Vector2( 3.36353, 0 )
+script = ExtResource( 13 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -143,7 +147,7 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 
 [node name="Goal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6713.98, 48.545 )
-path = "res://Assets/scenes/Level2.tscn"
+path = "res://Assets/scenes/Level4.tscn"
 
 [node name="FireShader" parent="." instance=ExtResource( 6 )]
 position = Vector2( 479.114, 400 )
@@ -174,25 +178,31 @@ motion_mirroring = Vector2( 1285, 960 )
 [node name="RotatingFans" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3000, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 12 )
 
 [node name="RotatingFans2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4000, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 11 )
 
 [node name="RotatingFans3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 5000, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 12 )
 
 [node name="RotatingFans4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3500, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 11 )
 
 [node name="RotatingFans5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 4500, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 12 )
 
 [node name="RotatingFans6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 5500, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 11 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]

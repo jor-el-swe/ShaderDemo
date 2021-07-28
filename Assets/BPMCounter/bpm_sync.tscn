@@ -23,7 +23,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 BPM = 165
-trim = 0.05
+trim = 0.15
 
 [node name="Label" type="Label" parent="."]
 margin_left = 106.895

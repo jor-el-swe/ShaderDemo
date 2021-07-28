@@ -361,7 +361,7 @@ rotatingFanMaterial = ExtResource( 14 )
 angleIncrement = 1.066
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( -812.634, 434.542 )
+position = Vector2( -761.779, 443.017 )
 z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
