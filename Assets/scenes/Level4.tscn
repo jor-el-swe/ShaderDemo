@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -6,9 +6,8 @@
 [ext_resource path="res://Assets/background/set2_background.png" type="Texture" id=4]
 [ext_resource path="res://Assets/background/set2_tiles.png" type="Texture" id=5]
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/music/ghostsDontScareMe.mp3" type="AudioStream" id=7]
-[ext_resource path="res://Assets/scenes/shaders/VHSVision.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/music/finallySucceeding.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -20,7 +19,6 @@ position = Vector2( 3.36353, 0 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="blueSky" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 motion_mirroring = Vector2( 1280, 960 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/blueSky"]
@@ -29,7 +27,6 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="farBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 position = Vector2( 0, -1200 )
 motion_scale = Vector2( 0.2, 0.2 )
 motion_mirroring = Vector2( 2560, 1920 )
@@ -41,7 +38,6 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="middleBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 position = Vector2( 0, -500 )
 motion_scale = Vector2( 0.4, 0.4 )
 motion_mirroring = Vector2( 1600, 1200 )
@@ -53,7 +49,6 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="nearbyBlocks" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 motion_scale = Vector2( 0.7, 0.7 )
 motion_mirroring = Vector2( 1120, 840 )
 
@@ -81,24 +76,16 @@ shape = SubResource( 1 )
 position = Vector2( -623.88, 71.524 )
 direction = 1
 
-[node name="enemy4" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( -498.063, 71.8275 )
+[node name="enemy2" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 2532.48, 251.118 )
+direction = 1
+
+[node name="enemy3" parent="enemies" instance=ExtResource( 10 )]
+position = Vector2( 2654.71, 251.118 )
 
 [node name="enemy5" parent="enemies" instance=ExtResource( 10 )]
 position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
-
-[node name="enemy6" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( 3303.74, -249.852 )
-
-[node name="enemy7" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( 4376.07, -267.374 )
-
-[node name="enemy8" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( 5276.99, -252.137 )
-
-[node name="enemy9" parent="enemies" instance=ExtResource( 10 )]
-position = Vector2( -498.063, 71.8275 )
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
 position = Vector2( -812.223, 292.92 )
@@ -122,8 +109,8 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="musicLevel1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
-volume_db = -9.642
+stream = ExtResource( 8 )
+volume_db = -3.297
 autoplay = true
 
 [node name="tilesInAir2" type="TileMap" parent="."]
@@ -131,7 +118,7 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
 collision_layer = 66
 format = 1
-tile_data = PoolIntArray( -196562, 0, 0, -196561, 0, 0, -196560, 0, 0, -196547, 0, 0, -196546, 0, 0, -196533, 0, 0, -196532, 0, 0, -196531, 0, 0, 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
+tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
 
 [node name="tileOnGround" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -143,7 +130,6 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 
 [node name="Goal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6713.98, 48.545 )
-path = "res://Assets/scenes/Level2.tscn"
 
 [node name="FireShader" parent="." instance=ExtResource( 6 )]
 position = Vector2( 479.114, 400 )
@@ -161,38 +147,30 @@ scale = Vector2( 0.1, 0.3 )
 position = Vector2( 2611.66, 52.9415 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-layer = 0
+[node name="RotatingFans7" type="Node" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2( 0, 1 )
-motion_offset = Vector2( -600, -100 )
-motion_mirroring = Vector2( 1285, 960 )
-
-[node name="VHSVision" parent="ParallaxBackground2/ParallaxLayer" instance=ExtResource( 8 )]
-
-[node name="RotatingFans" parent="." instance=ExtResource( 9 )]
-position = Vector2( 3000, -230 )
+[node name="RotatingFans" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4000, -230 )
+[node name="RotatingFans2" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 4003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 5000, -230 )
+[node name="RotatingFans3" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 5003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 3500, -230 )
+[node name="RotatingFans4" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4500, -230 )
+[node name="RotatingFans5" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 5500, -230 )
+[node name="RotatingFans6" parent="RotatingFans7" instance=ExtResource( 7 )]
+position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
