@@ -185,3 +185,4 @@ margin_right = -1008.64
 margin_bottom = -196.0
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
+[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="BPMBackground/ParallaxLayer/BPMSync" method="_on_BPMSync_BPM_Tick"]

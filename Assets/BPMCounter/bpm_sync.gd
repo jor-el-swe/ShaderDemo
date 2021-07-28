@@ -9,6 +9,9 @@ const COMPENSATE_HZ = 60.0
 
 export(float, -0.5, 0.5, 0.01) var trim = 0.0
 
+signal BPM_Tick
+var bpmBeat
+var oldbpmBeat = 0
 
 # Used by system clock.
 var time_begin
@@ -36,7 +39,11 @@ func _process(_delta):
 	var beat = int(time * BPM / 60.0)
 	var seconds = int(time)
 	var seconds_total = int($Player.stream.get_length())
-	$Label.text = str("BEAT: ", beat % BARS + 1, "/", BARS, " TIME: ", seconds / 60, ":", strsec(seconds % 60), " / ", seconds_total / 60, ":", strsec(seconds_total % 60))
+	bpmBeat = beat % BARS + 1
+	if oldbpmBeat != bpmBeat:
+		oldbpmBeat = bpmBeat
+		emit_signal("BPM_Tick")
+	$Label.text = str("BEAT: ", bpmBeat, "/", BARS, " TIME: ", seconds / 60, ":", strsec(seconds % 60), " / ", seconds_total / 60, ":", strsec(seconds_total % 60))
 
 
 func _ready():
@@ -46,4 +53,7 @@ func _ready():
 	playing = true
 	$Player.play()
 
+ 
+func _on_BPMSync_BPM_Tick():
+	print("tick: ", bpmBeat)
 
