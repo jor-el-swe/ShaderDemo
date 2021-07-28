@@ -7,4 +7,4 @@ func _on_BPMSync_BPM_Tick():
 	add_color_override("font_color", Color(colorArray[index]))
 	index +=1
 	index = index%4
-	print("index: ", index)
+	print(" color cycle index: ", index)

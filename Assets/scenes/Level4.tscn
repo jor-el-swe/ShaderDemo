@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://metalTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/scenes/Attila.tscn" type="PackedScene" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial2.material" type="Material" id=11]
 [ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial1.material" type="Material" id=12]
 [ext_resource path="res://Assets/scenes/Fires.gd" type="Script" id=13]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.tres" type="Material" id=14]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial2.tres" type="Material" id=15]
+[ext_resource path="res://Assets/scenes/RotatingFans.gd" type="Script" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
@@ -97,7 +100,7 @@ position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( -755.008, 407.148 )
+position = Vector2( 4843.35, 6.94492 )
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
 position = Vector2( 2.54883, -89.0872 )
@@ -136,30 +139,43 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 position = Vector2( 6713.98, 48.545 )
 
 [node name="RotatingFans" type="Node" parent="."]
+script = ExtResource( 16 )
 
 [node name="RotatingFans" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
-
-[node name="RotatingFans2" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 4003.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-
-[node name="RotatingFans3" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 5003.36, -230 )
-scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
 
 [node name="RotatingFans4" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans2" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 4003.36, -230 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
 
 [node name="RotatingFans5" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans3" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5003.36, -230 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
 
 [node name="RotatingFans6" parent="RotatingFans" instance=ExtResource( 7 )]
 position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
 
 [node name="Fires" type="Node" parent="."]
 script = ExtResource( 13 )
@@ -254,5 +270,6 @@ margin_right = -1008.64
 margin_bottom = -196.0
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
-[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="Fires" method="_on_BPM_Tick"]
 [connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="BPMBackground/ParallaxLayer/BPMSync" method="_on_BPMSync_BPM_Tick"]
+[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="RotatingFans" method="_on_BPM_Tick"]
+[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="Fires" method="_on_BPM_Tick"]

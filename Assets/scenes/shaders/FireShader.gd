@@ -17,5 +17,4 @@ func toggleMaterial():
 	$ColorRect.set("material", materialArray[iterator])
 	iterator+=1
 	iterator %= materialArray.size()
-	print("set material: ", iterator)
 

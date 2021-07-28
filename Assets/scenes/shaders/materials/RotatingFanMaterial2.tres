@@ -1,0 +1,61 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "//---CRT Shader---
+shader_type canvas_item;
+
+uniform float rotationDirection = 1;
+uniform float tickAngleIncrement = 0.0;
+
+vec4 propeller(vec2 uv, float time){
+                vec3 color = vec3(0.0);
+
+                vec2 pos = vec2(0.5,0.5)-uv;
+                float r = length(pos)*5.1;
+                float a = atan(pos.x, pos.y);
+
+                 //play with animation
+                 float f = cos(10.0*a);
+
+
+                 color = vec3(1.0-smoothstep(f,f,r*sin(1.5*time)*0.4), 
+				1.0-smoothstep(f,f,r*sin(0.5*time)*1.4),
+				1.0-smoothstep(f,f,r*sin(1.8*time)*1.1));
+
+
+                return vec4(color, 1.0);
+            }
+
+
+mat2 rotate2d(float _angle){
+	return mat2(vec2(cos(_angle),-sin(_angle)),vec2(sin(_angle),cos(_angle)));		
+}
+	
+
+mat2 scale(vec2 _scale){
+    return mat2(vec2(_scale.x,0.0),vec2(0.0,_scale.y));
+}
+			
+vec4 rotatePropeller(vec2 uv,float time){
+    uv -= 0.5;
+    uv = uv*rotate2d( -time *-rotationDirection -tickAngleIncrement);
+	uv = uv*scale(vec2(1.0));
+    uv += 0.5;
+    return propeller(uv, time);
+}
+
+			
+void fragment()
+{	
+	vec2 uv = UV;
+    //uv *= 2.0;      // Scale up the space by 3
+    uv = min(uv,vec2(2.0)); // Wrap around 1.0
+    COLOR = rotatePropeller(uv, TIME);
+
+}
+"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/rotationDirection = 1.0
+shader_param/tickAngleIncrement = 0.0
