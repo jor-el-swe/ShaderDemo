@@ -112,10 +112,10 @@ cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 2, 0, 131107, 0, 0, 131108, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 131120, 0, 0, 131121, 0, 0, 131122, 0, 0, 131123, 0, 0, 131124, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 131128, 0, 0, 131129, 0, 0, 131130, 0, 0, 131131, 0, 0, 131132, 0, 0, 131133, 0, 0, 131134, 0, 0, 131135, 0, 0, 131136, 0, 0, 131137, 0, 0, 131138, 0, 0, 131139, 0, 0, 131140, 0, 0, 131141, 0, 0, 131142, 0, 0, 131143, 0, 0, 131144, 0, 0, 131145, 0, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131155, 0, 0, 131156, 0, 0, 131157, 0, 0, 131158, 0, 0, 131159, 0, 0, 131160, 0, 0, 131161, 0, 0, 131162, 0, 0, 131163, 0, 0, 131164, 0, 0, 131165, 0, 0, 131166, 0, 0, 131167, 0, 0, 131168, 0, 0, 131200, 0, 0, 131201, 0, 0, 131202, 0, 0, 131203, 0, 0, 131204, 0, 0, 131205, 0, 0, 131206, 0, 0, 131207, 0, 0, 131208, 0, 0, 131209, 0, 0, 131210, 0, 0, 131211, 0, 0, 131212, 0, 0, 131213, 0, 0, 131214, 0, 0, 131215, 0, 0, 131216, 0, 0, 131217, 0, 0, 131218, 0, 0, 131219, 0, 0, 131220, 0, 0, 131221, 0, 0, 131222, 0, 0, 131223, 0, 0, 131224, 0, 0, 131225, 0, 0, 131226, 0, 0, 131227, 0, 0, 131228, 0, 0, 131229, 0, 0, 131230, 0, 0, 131231, 0, 0, 458738, 0, 0, 524274, 0, 0, 589810, 0, 0, 589811, 0, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0 )
+tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 2, 0, 131107, 0, 0, 131108, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 131120, 0, 0, 131121, 0, 0, 131122, 0, 0, 131123, 0, 0, 131124, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 131128, 0, 0, 131129, 0, 0, 131130, 0, 0, 131131, 0, 0, 131132, 0, 0, 131133, 0, 0, 131134, 0, 0, 131135, 0, 0, 131136, 0, 0, 131137, 0, 0, 131138, 0, 0, 131139, 0, 0, 131140, 0, 0, 131141, 0, 0, 131142, 0, 0, 131143, 0, 0, 131144, 0, 0, 131145, 0, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131155, 0, 0, 131156, 0, 0, 131157, 0, 0, 131158, 0, 0, 131159, 0, 0, 131160, 0, 0, 131161, 0, 0, 131162, 0, 0, 131163, 0, 0, 131164, 0, 0, 131165, 0, 0, 131166, 0, 0, 131167, 0, 0, 131168, 0, 0, 131200, 0, 0, 131201, 0, 0, 131202, 0, 0, 131203, 0, 0, 131204, 0, 0, 131205, 0, 0, 131206, 0, 0, 131207, 0, 0, 131208, 0, 0, 131209, 0, 0, 131210, 0, 0, 131211, 0, 0, 131212, 0, 0, 131213, 0, 0, 131214, 0, 0, 131215, 0, 0, 131216, 0, 0, 131217, 0, 0, 131218, 0, 0, 131219, 0, 0, 131220, 0, 0, 131221, 0, 0, 131222, 0, 0, 131223, 0, 0, 131224, 0, 0, 131225, 0, 0, 131226, 0, 0, 131227, 0, 0, 131228, 0, 0, 131229, 0, 0, 131230, 0, 0, 131231, 0, 0, 458738, 0, 0, 524274, 0, 0, 589810, 0, 0, 589811, 0, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 1179887, 0, 0, 1179888, 0, 0, 1179889, 0, 0, 1179890, 0, 0, 1179891, 0, 0, 1179892, 0, 0, 1179893, 0, 0, 1179894, 0, 0, 1179895, 0, 0, 1179896, 0, 0, 1179897, 0, 0, 1179898, 0, 0, 1179899, 0, 0, 1179900, 0, 0, 1179901, 0, 0, 1179902, 0, 0, 1179903, 0, 0, 1179904, 0, 0, 1179905, 0, 0, 1179906, 0, 0, 1179907, 0, 0, 1179908, 0, 0, 1179909, 0, 0, 1179910, 0, 0, 1179911, 0, 0, 1179912, 0, 0, 1179913, 0, 0, 1179914, 0, 0, 1179915, 0, 0, 1179916, 0, 0, 1179917, 0, 0, 1179918, 0, 0, 1179919, 0, 0, 1179920, 0, 0, 1179921, 0, 0, 1179922, 0, 0, 1179923, 0, 0, 1179924, 0, 0, 1179925, 0, 0, 1179926, 0, 0, 1179927, 0, 0, 1179928, 0, 0, 1179929, 0, 0, 1179930, 0, 0, 1179931, 0, 0 )
 
 [node name="Goal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 16935.8, -1373.25 )
+position = Vector2( 19771.1, 1158.69 )
 
 [node name="RotatingFans" type="Node" parent="."]
 script = ExtResource( 16 )
@@ -342,8 +342,26 @@ scale = Vector2( 1.71927, 1.71927 )
 rotatingFanMaterial = ExtResource( 14 )
 angleIncrement = 1.066
 
+[node name="RotatingFans38" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 12941.5, -1916.98 )
+scale = Vector2( 1.71927, 1.71927 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans39" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 14576, -1916.98 )
+scale = Vector2( 1.71927, 1.71927 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans40" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 17084.1, -859.759 )
+scale = Vector2( 2.20104, 2.20104 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( 7314.39, -421.779 )
+position = Vector2( 16499.6, -1526.48 )
 z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
@@ -351,12 +369,12 @@ position = Vector2( 2.54883, -89.0872 )
 current = true
 limit_left = -1015
 limit_top = -2000
-limit_right = 15000
-limit_bottom = 630
+limit_right = 20000
+limit_bottom = 3000
 limit_smoothed = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-smoothing_speed = 3.0
+smoothing_speed = 10.0
 drag_margin_left = 0.3
 drag_margin_top = 0.31
 drag_margin_right = 0.3
@@ -439,6 +457,131 @@ materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
 
 [node name="FireShader16" parent="Fires" instance=ExtResource( 6 )]
 position = Vector2( 2486.81, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader17" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8493.43, -30.4848 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader18" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8401.93, -30.4848 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader19" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8586.31, -30.4848 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader20" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8687.98, -30.4848 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader21" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8790.87, -30.4848 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader22" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9005.43, -234.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader23" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 8913.93, -234.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader24" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9098.31, -234.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader25" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9199.98, -234.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader26" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9302.87, -234.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader27" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9605.43, -434.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader28" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9513.93, -434.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader29" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9698.31, -434.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader30" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9799.98, -434.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader31" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 9902.87, -434.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader32" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10189.4, -626.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader33" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10097.9, -626.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader34" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10282.3, -626.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader35" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10384, -626.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader36" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10486.9, -626.485 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader37" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10827, -837.508 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader38" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10735.5, -837.508 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader39" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 10919.9, -837.508 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader40" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 11021.5, -837.508 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader41" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 11124.4, -837.508 )
 scale = Vector2( 0.1, 0.3 )
 materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
 
