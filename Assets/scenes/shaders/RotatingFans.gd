@@ -8,12 +8,11 @@ export var angleIncrement = 0.5
 
 var Mat
 func _ready():
-	Mat = $ColorRect.get_material()
 	$ColorRect.set("material", rotatingFanMaterial)
-
+	Mat = $ColorRect.get_material()
+	
 
 func tickAngle():
-	#angleOffset+=angleIncrement
 	angleOffset+=angleIncrement
 	Mat.set_shader_param("tickAngleIncrement",angleOffset)
 	print("set angle tick: ", angleOffset)

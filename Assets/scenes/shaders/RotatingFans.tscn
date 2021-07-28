@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.gd" type="Script" id=1]
-[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial2.tres" type="Material" id=2]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.material" type="Material" id=2]
 
 [node name="RotatingFans" type="Node2D"]
 script = ExtResource( 1 )

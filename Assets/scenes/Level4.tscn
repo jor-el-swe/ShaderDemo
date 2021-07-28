@@ -13,8 +13,8 @@
 [ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial2.material" type="Material" id=11]
 [ext_resource path="res://Assets/scenes/shaders/materials/FireMaterial1.material" type="Material" id=12]
 [ext_resource path="res://Assets/scenes/Fires.gd" type="Script" id=13]
-[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.tres" type="Material" id=14]
-[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial2.tres" type="Material" id=15]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial2.material" type="Material" id=14]
+[ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.material" type="Material" id=15]
 [ext_resource path="res://Assets/scenes/RotatingFans.gd" type="Script" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -99,15 +99,259 @@ position = Vector2( 2654.71, 251.118 )
 position = Vector2( 239.85, 252.773 )
 detectsCliffs = false
 
+[node name="tilesInAir2" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+collision_layer = 66
+format = 1
+tile_data = PoolIntArray( -1048414, 3, 0, -1048413, 3, 0, -1048412, 3, 0, -1048411, 3, 0, -1048410, 3, 0, -1048409, 3, 0, -1048408, 3, 0, -1048407, 3, 0, -1048406, 3, 0, -1048405, 3, 0, -1048404, 3, 0, -1048403, 3, 0, -1048402, 3, 0, -1048401, 3, 0, -1048400, 3, 0, -1048399, 3, 0, -1048398, 3, 0, -1048397, 0, 0, -1048396, 0, 0, -1048395, 0, 0, -1048394, 0, 0, -1048393, 0, 0, -1048392, 0, 0, -1048391, 0, 0, -1048390, 0, 0, -1048389, 0, 0, -1048388, 0, 0, -1048387, 0, 0, -1048386, 0, 0, -1048385, 0, 0, -1048384, 0, 0, -1048383, 0, 0, -1048382, 0, 0, -1048381, 0, 0, -1048380, 0, 0, -1048379, 0, 0, -1048378, 0, 0, -1048377, 0, 0, -1048376, 0, 0, -1048375, 0, 0, -1048374, 0, 0, -1048373, 0, 0, -1048372, 0, 0, -1048371, 0, 0, -1048370, 0, 0, -1048369, 0, 0, -1048368, 0, 0, -1048367, 0, 0, -1048366, 0, 0, -1048365, 0, 0, -1048364, 0, 0, -1048363, 0, 0, -1048362, 0, 0, -1048361, 0, 0, -1048360, 0, 0, -1048359, 0, 0, -1048358, 0, 0, -1048357, 0, 0, -1048356, 0, 0, -1048355, 0, 0, -1048354, 0, 0, -1048353, 0, 0, -1048352, 0, 0, -1048351, 0, 0, -1048350, 0, 0, -1048349, 0, 0, -1048348, 0, 0, -1048347, 0, 0, -1048346, 0, 0, -1048345, 0, 0, -1048344, 0, 0, -1048343, 0, 0, -1048342, 0, 0, -1048341, 0, 0, -1048340, 0, 0, -1048339, 0, 0, -1048338, 0, 0, -1048337, 0, 0, -1048336, 0, 0, -1048335, 0, 0, -1048334, 0, 0, -1048333, 0, 0, -851816, 3, 0, -851815, 3, 0, -851814, 3, 0, -851813, 3, 0, -851812, 3, 0, -851811, 3, 0, -851810, 3, 0, -851809, 3, 0, -851808, 3, 0, -851807, 3, 0, -655216, 3, 0, -655215, 3, 0, -655214, 3, 0, -655213, 3, 0, -655212, 3, 0, -655211, 3, 0, -655210, 3, 0, -655209, 3, 0, -458617, 3, 0, -458616, 3, 0, -458615, 3, 0, -458614, 3, 0, -458613, 3, 0, -458612, 3, 0, -458611, 3, 0, -458610, 3, 0, -458609, 3, 0, -262017, 3, 0, -262016, 3, 0, -262015, 3, 0, -262014, 3, 0, -262013, 3, 0, -262012, 3, 0, -262011, 3, 0, -262010, 3, 0, -65416, 3, 0, -65415, 3, 0, -65414, 3, 0, -65413, 3, 0, -65412, 3, 0, -65411, 3, 0, -65410, 3, 0, 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 131169, 0, 0, 131170, 0, 0, 131171, 0, 0, 131172, 0, 0, 131173, 0, 0, 131174, 0, 0, 131175, 0, 0, 131176, 0, 0, 131177, 0, 0, 131178, 0, 0, 131179, 0, 0, 131180, 0, 0, 131181, 0, 0, 131182, 0, 0, 131183, 0, 0, 131184, 0, 0, 131185, 0, 0, 131186, 0, 0, 131187, 0, 0, 131188, 0, 0, 131189, 0, 0, 131190, 0, 0, 131191, 0, 0, 131192, 0, 0, 131193, 0, 0, 131194, 0, 0, 131195, 0, 0, 131196, 0, 0, 131197, 0, 0, 131198, 0, 0, 131199, 0, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
+
+[node name="tileOnGround" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 2, 0, 131107, 0, 0, 131108, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 131120, 0, 0, 131121, 0, 0, 131122, 0, 0, 131123, 0, 0, 131124, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 131128, 0, 0, 131129, 0, 0, 131130, 0, 0, 131131, 0, 0, 131132, 0, 0, 131133, 0, 0, 131134, 0, 0, 131135, 0, 0, 131136, 0, 0, 131137, 0, 0, 131138, 0, 0, 131139, 0, 0, 131140, 0, 0, 131141, 0, 0, 131142, 0, 0, 131143, 0, 0, 131144, 0, 0, 131145, 0, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131155, 0, 0, 131156, 0, 0, 131157, 0, 0, 131158, 0, 0, 131159, 0, 0, 131160, 0, 0, 131161, 0, 0, 131162, 0, 0, 131163, 0, 0, 131164, 0, 0, 131165, 0, 0, 131166, 0, 0, 131167, 0, 0, 131168, 0, 0, 131200, 0, 0, 131201, 0, 0, 131202, 0, 0, 131203, 0, 0, 131204, 0, 0, 131205, 0, 0, 131206, 0, 0, 131207, 0, 0, 131208, 0, 0, 131209, 0, 0, 131210, 0, 0, 131211, 0, 0, 131212, 0, 0, 131213, 0, 0, 131214, 0, 0, 131215, 0, 0, 131216, 0, 0, 131217, 0, 0, 131218, 0, 0, 131219, 0, 0, 131220, 0, 0, 131221, 0, 0, 131222, 0, 0, 131223, 0, 0, 131224, 0, 0, 131225, 0, 0, 131226, 0, 0, 131227, 0, 0, 131228, 0, 0, 131229, 0, 0, 131230, 0, 0, 131231, 0, 0, 458738, 0, 0, 524274, 0, 0, 589810, 0, 0, 589811, 0, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0 )
+
+[node name="Goal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 16935.8, -1373.25 )
+
+[node name="RotatingFans" type="Node" parent="."]
+script = ExtResource( 16 )
+
+[node name="RotatingFans" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 3007.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans4" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 3307.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans2" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 3607.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans5" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 3907.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans3" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 4207.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans6" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 4507.13, -172.982 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans7" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 4783.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans8" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5083.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans9" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5383.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans10" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5683.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans11" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5983.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans12" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6283.13, -293.864 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans13" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 4783.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans14" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5083.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans15" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5383.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans16" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5683.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans17" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 5983.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans18" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6283.13, -61.8644 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans19" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6548.25, -100 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans20" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6852.25, -98.3653 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans21" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7154.37, -100.484 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans22" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7452.25, -98.3653 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans23" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7752.25, -98.3653 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans24" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 8048.25, -98.3653 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans25" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6548.25, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans26" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6852.25, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans27" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7154.37, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans28" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7451.57, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans29" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7752.25, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans30" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 8048.25, -290 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans31" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6548.25, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans32" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 6852.25, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 5.0
+
+[node name="RotatingFans33" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7154.37, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans34" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7452.25, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans35" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 7752.25, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 15 )
+angleIncrement = 1.066
+
+[node name="RotatingFans36" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 8048.25, 90 )
+scale = Vector2( 0.2, 0.2 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
+[node name="RotatingFans37" parent="RotatingFans" instance=ExtResource( 7 )]
+position = Vector2( 11297.2, -1916.98 )
+scale = Vector2( 1.71927, 1.71927 )
+rotatingFanMaterial = ExtResource( 14 )
+angleIncrement = 1.066
+
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( 4843.35, 6.94492 )
+position = Vector2( 7314.39, -421.779 )
+z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
 position = Vector2( 2.54883, -89.0872 )
 current = true
 limit_left = -1015
-limit_top = -1000
-limit_right = 7000
+limit_top = -2000
+limit_right = 15000
 limit_bottom = 630
 limit_smoothed = true
 drag_margin_v_enabled = true
@@ -119,63 +363,6 @@ drag_margin_right = 0.3
 drag_margin_bottom = 0.11
 editor_draw_limits = true
 editor_draw_drag_margin = true
-
-[node name="tilesInAir2" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 70, 70 )
-collision_layer = 66
-format = 1
-tile_data = PoolIntArray( 131102, 3, 0, 131103, 3, 0, 131104, 3, 0, 131105, 3, 0, 131106, 3, 0, 262179, 0, 0, 262180, 0, 0, 262181, 0, 0, 262182, 0, 0, 327687, 3, 0, 327688, 3, 0, 327689, 3, 0, 327690, 3, 0, 327691, 3, 0, 327692, 3, 0, 327704, 3, 0, 327705, 3, 0, 327706, 3, 0, 327707, 3, 0, 327708, 3, 0, 327709, 3, 0 )
-
-[node name="tileOnGround" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 70, 70 )
-cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
-collision_layer = 2
-format = 1
-tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0, 196600, 3, 0, 196601, 2, 0, 131107, 0, 0, 131108, 0, 0, 131111, 0, 0, 131112, 0, 0, 131113, 0, 0, 131114, 0, 0, 131115, 0, 0, 131116, 0, 0, 131117, 0, 0, 131118, 0, 0, 131119, 0, 0, 131120, 0, 0, 131121, 0, 0, 131122, 0, 0, 131123, 0, 0, 131124, 0, 0, 131125, 0, 0, 131126, 0, 0, 131127, 0, 0, 131128, 0, 0, 131129, 0, 0, 131130, 0, 0, 131131, 0, 0, 131132, 0, 0, 131133, 0, 0, 131134, 0, 0, 131135, 0, 0, 131136, 0, 0, 131137, 0, 0, 131138, 0, 0, 131139, 0, 0, 131140, 0, 0, 131141, 0, 0, 131142, 0, 0, 131143, 0, 0, 131144, 0, 0, 131145, 0, 0, 131146, 0, 0, 131147, 0, 0, 131148, 0, 0, 131149, 0, 0, 131150, 0, 0, 131151, 0, 0, 131152, 0, 0, 131153, 0, 0, 131154, 0, 0, 131155, 0, 0, 131156, 0, 0, 131157, 0, 0, 131158, 0, 0, 131159, 0, 0, 131160, 0, 0, 131161, 0, 0, 131162, 0, 0, 131163, 0, 0, 131164, 0, 0, 131165, 0, 0, 131166, 0, 0, 131167, 0, 0, 131168, 0, 0, 458738, 0, 0, 524274, 0, 0, 589810, 0, 0, 589811, 0, 0, 589812, 0, 0, 589813, 0, 0, 589814, 0, 0, 589815, 0, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0 )
-
-[node name="Goal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6713.98, 48.545 )
-
-[node name="RotatingFans" type="Node" parent="."]
-script = ExtResource( 16 )
-
-[node name="RotatingFans" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 3003.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 14 )
-angleIncrement = 1.066
-
-[node name="RotatingFans4" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 3503.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 14 )
-angleIncrement = 1.066
-
-[node name="RotatingFans2" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 4003.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 14 )
-angleIncrement = 1.066
-
-[node name="RotatingFans5" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 4503.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 15 )
-angleIncrement = 1.066
-
-[node name="RotatingFans3" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 5003.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 14 )
-angleIncrement = 1.066
-
-[node name="RotatingFans6" parent="RotatingFans" instance=ExtResource( 7 )]
-position = Vector2( 5503.36, -230 )
-scale = Vector2( 0.2, 0.2 )
-rotatingFanMaterial = ExtResource( 15 )
-angleIncrement = 1.066
 
 [node name="Fires" type="Node" parent="."]
 script = ExtResource( 13 )
@@ -270,6 +457,6 @@ margin_right = -1008.64
 margin_bottom = -196.0
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
-[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="BPMBackground/ParallaxLayer/BPMSync" method="_on_BPMSync_BPM_Tick"]
 [connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="RotatingFans" method="_on_BPM_Tick"]
 [connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="Fires" method="_on_BPM_Tick"]
+[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="BPMBackground/ParallaxLayer/BPMSync" method="_on_BPMSync_BPM_Tick"]
