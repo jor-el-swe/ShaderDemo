@@ -132,44 +132,48 @@ tile_data = PoolIntArray( 196596, 1, 0, 196597, 3, 0, 196598, 3, 0, 196599, 3, 0
 position = Vector2( 6713.98, 48.545 )
 path = "res://Assets/scenes/Level2.tscn"
 
-[node name="FireShader" parent="." instance=ExtResource( 6 )]
-position = Vector2( 479.114, 400 )
+[node name="Fire" type="Node" parent="."]
+
+[node name="FireShader" parent="Fire" instance=ExtResource( 6 )]
+position = Vector2( 482.478, 400 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="FireShader2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 599.424, 400 )
+[node name="FireShader2" parent="Fire" instance=ExtResource( 6 )]
+position = Vector2( 602.788, 400 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="FireShader3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 822.975, 400 )
+[node name="FireShader3" parent="Fire" instance=ExtResource( 6 )]
+position = Vector2( 826.339, 400 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="FireShader4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2611.66, 52.9415 )
+[node name="FireShader4" parent="Fire" instance=ExtResource( 6 )]
+position = Vector2( 2615.02, 52.9415 )
 scale = Vector2( 0.1, 0.3 )
 
-[node name="RotatingFans" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3000, -230 )
+[node name="Fans" type="Node" parent="."]
+
+[node name="RotatingFans" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 3003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4000, -230 )
+[node name="RotatingFans2" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 4003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5000, -230 )
+[node name="RotatingFans3" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 5003.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3500, -230 )
+[node name="RotatingFans4" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 3503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4500, -230 )
+[node name="RotatingFans5" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 4503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
-[node name="RotatingFans6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 5500, -230 )
+[node name="RotatingFans6" parent="Fans" instance=ExtResource( 7 )]
+position = Vector2( 5503.36, -230 )
 scale = Vector2( 0.2, 0.2 )
 
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
