@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets/music/lullaby.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Assets/music/lullaby.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/scripts/playButton.gd" type="Script" id=3]
 [ext_resource path="res://Assets/fonts/KiriFont.ttf" type="DynamicFontData" id=5]
 

@@ -8,8 +8,8 @@
 [ext_resource path="res://Assets/scenes/shaders/FireShader.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/scenes/shaders/RotatingFans.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/scenes/shaders/materials/RotatingFanMaterial1.material" type="Material" id=8]
+[ext_resource path="res://Assets/music/timeToRelax.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/scenes/enemy.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/music/timeToRelax.mp3" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4535.81, 176.353 )
@@ -110,7 +110,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="musicLevel1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource( 9 )
 volume_db = -9.642
 autoplay = true
 

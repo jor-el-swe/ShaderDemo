@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/finallySucceeding.wav-0605fe707b97975f8bc82c25bba4d704.sample"
+
+[deps]
+
+source_file="res://Assets/music/finallySucceeding.wav"
+dest_files=[ "res://.import/finallySucceeding.wav-0605fe707b97975f8bc82c25bba4d704.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
