@@ -15,4 +15,3 @@ func _ready():
 func tickAngle():
 	angleOffset+=angleIncrement
 	Mat.set_shader_param("tickAngleIncrement",angleOffset)
-	print("set angle tick: ", angleOffset)

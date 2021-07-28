@@ -54,6 +54,3 @@ func _ready():
 	$Player.play()
 
  
-func _on_BPMSync_BPM_Tick():
-	print("tick: ", bpmBeat)
-

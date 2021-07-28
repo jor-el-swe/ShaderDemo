@@ -361,7 +361,7 @@ rotatingFanMaterial = ExtResource( 14 )
 angleIncrement = 1.066
 
 [node name="Attila" parent="." instance=ExtResource( 2 )]
-position = Vector2( 16499.6, -1526.48 )
+position = Vector2( -812.634, 434.542 )
 z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="Attila"]
@@ -602,4 +602,3 @@ margin_bottom = -196.0
 [connection signal="body_entered" from="FallZone" to="Attila" method="_on_FallZone_body_entered"]
 [connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="RotatingFans" method="_on_BPM_Tick"]
 [connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="Fires" method="_on_BPM_Tick"]
-[connection signal="BPM_Tick" from="BPMBackground/ParallaxLayer/BPMSync" to="BPMBackground/ParallaxLayer/BPMSync" method="_on_BPMSync_BPM_Tick"]
