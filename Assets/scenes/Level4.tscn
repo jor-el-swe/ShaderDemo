@@ -189,6 +189,56 @@ position = Vector2( 839.783, 400 )
 scale = Vector2( 0.1, 0.3 )
 materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
 
+[node name="FireShader7" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 1751.86, 400 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader8" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 1660.36, 400 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader9" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 1844.74, 400 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader10" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 1946.41, 400 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader11" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2049.31, 400 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader12" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2189.37, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader13" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2097.87, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader14" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2282.25, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
+[node name="FireShader15" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2383.92, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 12 ), ExtResource( 11 ) ]
+
+[node name="FireShader16" parent="Fires" instance=ExtResource( 6 )]
+position = Vector2( 2486.81, -265.248 )
+scale = Vector2( 0.1, 0.3 )
+materialArray = [ ExtResource( 11 ), ExtResource( 12 ) ]
+
 [node name="BPMBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BPMBackground"]
